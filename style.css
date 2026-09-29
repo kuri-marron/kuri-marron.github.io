@@ -1,0 +1,71 @@
+/* marron のゲームのサイト共通の見た目（プライバシーポリシー・サポートなど） */
+:root {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --text: #16181d;
+  --muted: #5b6472;
+  --line: #e2e6ee;
+  --accent: #2563eb;
+  --head: linear-gradient(180deg, #4fa2f6 0%, #7fb7e8 100%);
+  --head-text: #0f1a3a;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111318;
+    --surface: #1b1e25;
+    --text: #eef0f4;
+    --muted: #a3aab6;
+    --line: #2b2f38;
+    --accent: #7aa7ff;
+    --head: linear-gradient(180deg, #1e3a6b 0%, #1b2a4a 100%);
+    --head-text: #eef3ff;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Segoe UI", sans-serif;
+  line-height: 1.8;
+}
+a { color: var(--accent); }
+
+.site-head {
+  background: var(--head);
+  color: var(--head-text);
+  padding: 28px 16px 24px;
+}
+.site-head .inner, main { max-width: 720px; margin: 0 auto; }
+.site-head .app { margin: 0; font-size: 0.9rem; font-weight: 700; opacity: 0.8; }
+.site-head h1 { margin: 2px 0 0; font-size: 1.6rem; line-height: 1.4; }
+
+main { padding: 24px 16px 48px; }
+section {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 4px 20px 16px;
+  margin-bottom: 16px;
+}
+h2 { font-size: 1.1rem; margin: 18px 0 6px; }
+h3 { font-size: 1rem; margin: 16px 0 4px; }
+p, ul { margin: 8px 0; }
+ul { padding-left: 1.3em; }
+li { margin: 2px 0; }
+.lead { margin: 0 0 16px; }
+.muted { color: var(--muted); font-size: 0.9rem; }
+.mail { font-size: 1.05rem; font-weight: 700; word-break: break-all; }
+
+.app-card h2 { margin-top: 16px; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+
+footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
