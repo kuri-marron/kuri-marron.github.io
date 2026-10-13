@@ -1,4 +1,4 @@
-/* marron のゲームのサイト共通の見た目（プライバシーポリシー・サポートなど） */
+/* marron のアプリのサイト共通の見た目（プライバシーポリシー・利用規約・サポートなど） */
 :root {
   --bg: #f4f7fb;
   --surface: #ffffff;
@@ -41,6 +41,10 @@ a { color: var(--accent); }
 .site-head .inner, main { max-width: 720px; margin: 0 auto; }
 .site-head .app { margin: 0; font-size: 0.9rem; font-weight: 700; opacity: 0.8; }
 .site-head h1 { margin: 2px 0 0; font-size: 1.6rem; line-height: 1.4; }
+/* 右上の言語の切り替え（日本語 ⇄ English） */
+.site-head .inner { position: relative; }
+.site-head .lang { position: absolute; top: 0; right: 0; margin: 0; font-size: 0.85rem; font-weight: 700; }
+.site-head .lang a { color: inherit; }
 
 main { padding: 24px 16px 48px; }
 section {
